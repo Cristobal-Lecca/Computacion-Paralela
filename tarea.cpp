@@ -10,8 +10,8 @@ using namespace std::chrono;
 
 
 vector<double> y(max, 0);
-vector<vector<double>> A(max, vector<double>(max, 20));
-vector<double> x(max, 20);
+vector<vector<double>> A(max, vector<double>(max, 12));
+vector<double> x(max, 15);
 
 int main()
 {
@@ -27,6 +27,8 @@ int main()
 
 	duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
 	std::cout << "first duration" << time_span.count() << " segundos." << endl;
+
+	fill(y.begin(), y.end(), 0);
 
 	high_resolution_clock::time_point t11 = high_resolution_clock::now();
 	for (double j = 0; j < max; j++)
